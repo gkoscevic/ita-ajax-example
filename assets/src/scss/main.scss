@@ -2,21 +2,126 @@
  *
  * All scss here
  */
+ @import 'reset';
 
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: #2c3e50;
+  color: #58595B;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   margin: 0;
 }
 
-main {
-  margin: 40px auto 0;
-  max-width: 960px;
-  text-align: center;
+.main {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
 }
+// .main
 
-img {
-  max-width: 100%;
+.canvas {
+  box-shadow: 0 0 20px 0 rgba(168,168,168,1);
+  display: flex;
+  height: 700px;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
 }
+// .canvas
+
+.plans {
+  display: flex;
+  align-items: center;
+}
+// .plans
+
+.plan {
+  border: 1px solid #D2D2D2;
+  max-width: 370px;
+  text-align: center;
+
+  + .plan {
+    margin-left: 100px;
+  }
+
+  &__inner {
+    padding: 40px 30px 40px;
+  }
+  // .plan__inner
+
+  &__speed {
+    background-image: url('/assets/images/_icon-double-play.svg');
+    display: inline-block;
+    height: 72px;
+    position: relative;
+    width: 135px;
+
+    span {
+      font-size: 14px;
+      position: absolute;
+      right: 30px;
+      top: 40px;
+    }
+    // .plan__speed span
+  }
+  // .plan__speed
+
+  &__title {
+    font-size: 16px;
+    margin: 30px 0;
+  }
+  // .plan__title
+
+  &__price {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .currency {
+      font-size: 20px;
+    }
+    // .plan__price .currency
+
+    .amount {
+      font-size: 90px;
+      font-weight: 700;
+    }
+    // .plan__price .amount
+  }
+  // .plan__price
+
+  &__button {
+    appearance: none;
+    background: #DA262D;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px 0;
+    outline: none;
+    padding: 15px 0;
+    width: 100%;
+  }
+  // .plan__button
+
+  &-features {
+    
+    &__list {
+      line-height: 2;
+    }
+    // .plan-features__list
+
+    &__icon {
+      background-image: url('/assets/images/_icon-check.svg');
+      display: inline-block;
+      margin-right: 10px;
+      width: 16px;
+      height: 12px;
+    }
+    // .plan-features__icon
+  }
+  // .plan-features
+}
+// .plan
